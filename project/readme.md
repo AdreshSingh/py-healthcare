@@ -30,7 +30,55 @@ To run this project, you need the following installed:
    cd person-upload-django
    ```
 
+# **File Structure**
+
+```
+person-upload-django/
+│
+├── person_upload/          # Main Django app
+│   ├── migrations/         # Database migration files
+│   ├── templates/          # HTML templates
+│   ├── views.py            # Application views
+│   ├── models.py           # Data models
+│   ├── forms.py            # Django forms
+│   └── urls.py             # App-specific URL routes
+│
+├── media/                  # Directory for uploaded files
+│
+├── manage.py               # Django project management script
+├── db.sqlite3              # SQLite database
+├── requirements.txt        # Project dependencies
+└── README.md               # a readme file
+```
+
 ## How to Use
+
+#### Create a Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+#### Install Dependencies
+
+```bash
+
+pip install -r requirements.txt
+```
+
+#### Run Database Migrations
+
+```bash
+python manage.py migrate
+```
+
+#### Start the Development Server
+
+```bash
+
+python manage.py runserver
+```
 
 #### To create Migration
 
